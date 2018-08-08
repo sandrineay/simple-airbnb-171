@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>List of flats</h1>
+
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+      <%= flat.name %>
+    <% end %>
+    <%= flat.address %>
+    <%= flat.price_per_night %>
+    <%= flat.number_of_guests %>
+    <%= link_to "Delete", flat_path(flat), method: :delete %>
+  <% end %>
+
+</div>
